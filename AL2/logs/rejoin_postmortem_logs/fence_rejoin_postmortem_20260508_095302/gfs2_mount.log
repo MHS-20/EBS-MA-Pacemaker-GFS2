@@ -1,0 +1,3 @@
+Filesystem                       Size  Used Avail Use% Mounted on
+/dev/mapper/clustervg-clusterlv   20G  647M   20G   4% /sharedFS
+/dev/mapper/clustervg-clusterlv on /sharedFS type gfs2 (rw,noatime)

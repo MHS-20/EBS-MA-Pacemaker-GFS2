@@ -1,0 +1,8 @@
+Location Constraints:
+Ordering Constraints:
+  start dlm-clone then start clvmd-clone (kind:Mandatory)
+  start clvmd-clone then start clusterfs-clone (kind:Mandatory)
+Colocation Constraints:
+  clvmd-clone with dlm-clone (score:INFINITY)
+  clusterfs-clone with clvmd-clone (score:INFINITY)
+Ticket Constraints:

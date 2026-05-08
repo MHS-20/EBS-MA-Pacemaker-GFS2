@@ -2,7 +2,7 @@
 # fence_rejoin_postmortem.sh
 # Captures the final healthy state after the node has fully rejoined.
 
-LOG_DIR="/var/log/fence_rejoin_postmortem_$(date +%Y%m%d_%H%M%S)"
+LOG_DIR="/var/log/rejoin_postmortem_$(date +%Y%m%d_%H%M%S)"
 mkdir -p "$LOG_DIR"
 echo "Saving rejoin post-mortem to: $LOG_DIR"
 

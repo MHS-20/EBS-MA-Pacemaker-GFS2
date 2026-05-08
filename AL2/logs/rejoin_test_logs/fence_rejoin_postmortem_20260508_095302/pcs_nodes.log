@@ -1,0 +1,12 @@
+Pacemaker Nodes:
+ Online: ma-host-1 ma-host-2 ma-host-3 ma-host-4 ma-host-5
+ Standby:
+ Standby with resource(s) running:
+ Maintenance:
+ Offline:
+Pacemaker Remote Nodes:
+ Online:
+ Standby:
+ Standby with resource(s) running:
+ Maintenance:
+ Offline:

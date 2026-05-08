@@ -3,7 +3,7 @@
 # Run this on the SURVIVOR node before you start the rejoin procedure.
 # It monitors the cluster until the rejoining node is fully Online.
 
-LOG_DIR="/var/log/fence_rejoin_$(date +%Y%m%d_%H%M%S)"
+LOG_DIR="/var/log/rejoin_$(date +%Y%m%d_%H%M%S)"
 mkdir -p "$LOG_DIR"
 echo "Logging rejoin to: $LOG_DIR"
 
