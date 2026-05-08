@@ -1,0 +1,67 @@
+Cluster name: macluster
+Stack: corosync
+Current DC: ma-host-1 (1) (version 1.1.23-1.amzn2.1-9acf116022) - partition with quorum
+Last updated: Fri May  8 07:41:44 2026
+Last change: Fri May  8 07:19:25 2026 by hacluster via crmd on ma-host-2
+
+5 nodes configured
+16 resource instances configured
+
+Online: [ ma-host-1 (1) ma-host-2 (2) ma-host-3 (3) ]
+OFFLINE: [ ma-host-4 (4) ma-host-5 (5) ]
+
+Full list of resources:
+
+ clusterfence	(stonith:fence_aws):	Started ma-host-1
+ Clone Set: dlm-clone [dlm]
+     dlm	(ocf::pacemaker:controld):	Started ma-host-1
+     dlm	(ocf::pacemaker:controld):	Started ma-host-2
+     dlm	(ocf::pacemaker:controld):	Started ma-host-3
+     dlm	(ocf::pacemaker:controld):	Stopped
+     dlm	(ocf::pacemaker:controld):	Stopped
+     Started: [ ma-host-1 ma-host-2 ma-host-3 ]
+     Stopped: [ ma-host-4 ma-host-5 ]
+ Clone Set: clvmd-clone [clvmd]
+     clvmd	(ocf::heartbeat:clvm):	Started ma-host-1
+     clvmd	(ocf::heartbeat:clvm):	Started ma-host-2
+     clvmd	(ocf::heartbeat:clvm):	Started ma-host-3
+     clvmd	(ocf::heartbeat:clvm):	Stopped
+     clvmd	(ocf::heartbeat:clvm):	Stopped
+     Started: [ ma-host-1 ma-host-2 ma-host-3 ]
+     Stopped: [ ma-host-4 ma-host-5 ]
+ Clone Set: clusterfs-clone [clusterfs]
+     clusterfs	(ocf::heartbeat:Filesystem):	Started ma-host-1
+     clusterfs	(ocf::heartbeat:Filesystem):	Started ma-host-2
+     clusterfs	(ocf::heartbeat:Filesystem):	Started ma-host-3
+     clusterfs	(ocf::heartbeat:Filesystem):	Stopped
+     clusterfs	(ocf::heartbeat:Filesystem):	Stopped
+     Started: [ ma-host-1 ma-host-2 ma-host-3 ]
+     Stopped: [ ma-host-4 ma-host-5 ]
+
+Node Attributes:
+* Node ma-host-1 (1):
+* Node ma-host-2 (2):
+* Node ma-host-3 (3):
+
+Migration Summary:
+* Node ma-host-1 (1):
+* Node ma-host-2 (2):
+* Node ma-host-3 (3):
+
+Fencing History:
+* turning off of ma-host-4 successful: delegate=ma-host-1, client=crmd.7469, origin=ma-host-1,
+    completed='Fri May  8 07:39:13 2026'
+* turning off of ma-host-5 successful: delegate=ma-host-1, client=crmd.7258, origin=ma-host-4,
+    completed='Fri May  8 07:28:06 2026'
+
+PCSD Status:
+  ma-host-3: Online
+  ma-host-1: Online
+  ma-host-2: Online
+  ma-host-4: Offline
+  ma-host-5: Offline
+
+Daemon Status:
+  corosync: active/disabled
+  pacemaker: active/disabled
+  pcsd: active/enabled

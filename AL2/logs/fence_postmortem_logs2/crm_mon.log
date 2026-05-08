@@ -1,0 +1,33 @@
+Stack: corosync
+Current DC: ma-host-1 (version 1.1.23-1.amzn2.1-9acf116022) - partition with quorum
+Last updated: Fri May  8 07:41:47 2026
+Last change: Fri May  8 07:19:25 2026 by hacluster via crmd on ma-host-2
+
+5 nodes configured
+16 resource instances configured
+
+Online: [ ma-host-1 ma-host-2 ma-host-3 ]
+OFFLINE: [ ma-host-4 ma-host-5 ]
+
+Full list of resources:
+
+ clusterfence	(stonith:fence_aws):	Started ma-host-1
+ Clone Set: dlm-clone [dlm]
+     Started: [ ma-host-1 ma-host-2 ma-host-3 ]
+     Stopped: [ ma-host-4 ma-host-5 ]
+ Clone Set: clvmd-clone [clvmd]
+     Started: [ ma-host-1 ma-host-2 ma-host-3 ]
+     Stopped: [ ma-host-4 ma-host-5 ]
+ Clone Set: clusterfs-clone [clusterfs]
+     Started: [ ma-host-1 ma-host-2 ma-host-3 ]
+     Stopped: [ ma-host-4 ma-host-5 ]
+
+Node Attributes:
+* Node ma-host-1:
+* Node ma-host-2:
+* Node ma-host-3:
+
+Migration Summary:
+* Node ma-host-1:
+* Node ma-host-2:
+* Node ma-host-3:
