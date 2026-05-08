@@ -1,0 +1,484 @@
+-- Logs begin at Fri 2026-05-08 06:59:57 UTC. --
+May 08 07:20:07 ip-172-31-35-142.eu-west-1.compute.internal stonith-ng[7465]:  warning: fence_aws[19170] stderr: [ /usr/lib/python3.7/site-packages/boto3/compat.py:82: PythonDeprecationWarning: Boto3 will no longer support Python 3.7 starting December 13, 2023. To continue receiving service updates, bug fixes, and security updates please upgrade to Python 3.8 or later. More information can be found here: https://aws.amazon.com/blogs/developer/python-support-policy-updates-for-aws-sdks-and-tools/ ]
+May 08 07:20:07 ip-172-31-35-142.eu-west-1.compute.internal stonith-ng[7465]:  warning: fence_aws[19170] stderr: [   warnings.warn(warning, PythonDeprecationWarning) ]
+May 08 07:21:08 ip-172-31-35-142.eu-west-1.compute.internal stonith-ng[7465]:   notice: fence_aws_monitor_1:8138:stderr [ /usr/lib/python3.7/site-packages/boto3/compat.py:82: PythonDeprecationWarning: Boto3 will no longer support Python 3.7 starting December 13, 2023. To continue receiving service updates, bug fixes, and security updates please upgrade to Python 3.8 or later. More information can be found here: https://aws.amazon.com/blogs/developer/python-support-policy-updates-for-aws-sdks-and-tools/ ]
+May 08 07:21:08 ip-172-31-35-142.eu-west-1.compute.internal stonith-ng[7465]:   notice: fence_aws_monitor_1:8138:stderr [   warnings.warn(warning, PythonDeprecationWarning) ]
+May 08 07:21:08 ip-172-31-35-142.eu-west-1.compute.internal stonith-ng[7465]:  warning: fence_aws[8138] stderr: [ /usr/lib/python3.7/site-packages/boto3/compat.py:82: PythonDeprecationWarning: Boto3 will no longer support Python 3.7 starting December 13, 2023. To continue receiving service updates, bug fixes, and security updates please upgrade to Python 3.8 or later. More information can be found here: https://aws.amazon.com/blogs/developer/python-support-policy-updates-for-aws-sdks-and-tools/ ]
+May 08 07:21:08 ip-172-31-35-142.eu-west-1.compute.internal stonith-ng[7465]:  warning: fence_aws[8138] stderr: [   warnings.warn(warning, PythonDeprecationWarning) ]
+May 08 07:22:08 ip-172-31-35-142.eu-west-1.compute.internal stonith-ng[7465]:   notice: fence_aws_monitor_1:22766:stderr [ /usr/lib/python3.7/site-packages/boto3/compat.py:82: PythonDeprecationWarning: Boto3 will no longer support Python 3.7 starting December 13, 2023. To continue receiving service updates, bug fixes, and security updates please upgrade to Python 3.8 or later. More information can be found here: https://aws.amazon.com/blogs/developer/python-support-policy-updates-for-aws-sdks-and-tools/ ]
+May 08 07:22:08 ip-172-31-35-142.eu-west-1.compute.internal stonith-ng[7465]:   notice: fence_aws_monitor_1:22766:stderr [   warnings.warn(warning, PythonDeprecationWarning) ]
+May 08 07:22:08 ip-172-31-35-142.eu-west-1.compute.internal stonith-ng[7465]:  warning: fence_aws[22766] stderr: [ /usr/lib/python3.7/site-packages/boto3/compat.py:82: PythonDeprecationWarning: Boto3 will no longer support Python 3.7 starting December 13, 2023. To continue receiving service updates, bug fixes, and security updates please upgrade to Python 3.8 or later. More information can be found here: https://aws.amazon.com/blogs/developer/python-support-policy-updates-for-aws-sdks-and-tools/ ]
+May 08 07:22:08 ip-172-31-35-142.eu-west-1.compute.internal stonith-ng[7465]:  warning: fence_aws[22766] stderr: [   warnings.warn(warning, PythonDeprecationWarning) ]
+May 08 07:23:09 ip-172-31-35-142.eu-west-1.compute.internal stonith-ng[7465]:   notice: fence_aws_monitor_1:23272:stderr [ /usr/lib/python3.7/site-packages/boto3/compat.py:82: PythonDeprecationWarning: Boto3 will no longer support Python 3.7 starting December 13, 2023. To continue receiving service updates, bug fixes, and security updates please upgrade to Python 3.8 or later. More information can be found here: https://aws.amazon.com/blogs/developer/python-support-policy-updates-for-aws-sdks-and-tools/ ]
+May 08 07:23:09 ip-172-31-35-142.eu-west-1.compute.internal stonith-ng[7465]:   notice: fence_aws_monitor_1:23272:stderr [   warnings.warn(warning, PythonDeprecationWarning) ]
+May 08 07:23:09 ip-172-31-35-142.eu-west-1.compute.internal stonith-ng[7465]:  warning: fence_aws[23272] stderr: [ /usr/lib/python3.7/site-packages/boto3/compat.py:82: PythonDeprecationWarning: Boto3 will no longer support Python 3.7 starting December 13, 2023. To continue receiving service updates, bug fixes, and security updates please upgrade to Python 3.8 or later. More information can be found here: https://aws.amazon.com/blogs/developer/python-support-policy-updates-for-aws-sdks-and-tools/ ]
+May 08 07:23:09 ip-172-31-35-142.eu-west-1.compute.internal stonith-ng[7465]:  warning: fence_aws[23272] stderr: [   warnings.warn(warning, PythonDeprecationWarning) ]
+May 08 07:23:41 ip-172-31-35-142.eu-west-1.compute.internal attrd[7467]:   notice: Node ma-host-5 state is now lost
+May 08 07:23:41 ip-172-31-35-142.eu-west-1.compute.internal attrd[7467]:   notice: Removing all ma-host-5 attributes for peer loss
+May 08 07:23:41 ip-172-31-35-142.eu-west-1.compute.internal attrd[7467]:   notice: Purged 1 peer with id=5 and/or uname=ma-host-5 from the membership cache
+May 08 07:23:41 ip-172-31-35-142.eu-west-1.compute.internal stonith-ng[7465]:   notice: Node ma-host-5 state is now lost
+May 08 07:23:41 ip-172-31-35-142.eu-west-1.compute.internal stonith-ng[7465]:   notice: Purged 1 peer with id=5 and/or uname=ma-host-5 from the membership cache
+May 08 07:23:41 ip-172-31-35-142.eu-west-1.compute.internal pacemakerd[7463]:   notice: Node ma-host-5 state is now lost
+May 08 07:23:41 ip-172-31-35-142.eu-west-1.compute.internal cib[7464]:   notice: Node ma-host-5 state is now lost
+May 08 07:23:41 ip-172-31-35-142.eu-west-1.compute.internal cib[7464]:   notice: Purged 1 peer with id=5 and/or uname=ma-host-5 from the membership cache
+May 08 07:23:41 ip-172-31-35-142.eu-west-1.compute.internal crmd[7469]:   notice: Node ma-host-5 state is now lost
+May 08 07:23:41 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1426 fence request 5 pid 23603 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:23:42 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1427 fence result 5 pid 23603 result -1 term signal 6
+May 08 07:23:42 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1427 fence status 5 receive -1 from 1 walltime 1778225022 local 1427
+May 08 07:23:42 ip-172-31-35-142.eu-west-1.compute.internal stonith-ng[7465]:   notice: clusterfence can fence (off) ma-host-5 (aka. 'i-03942144ed02ecd5d'): static-list
+May 08 07:23:42 ip-172-31-35-142.eu-west-1.compute.internal stonith-ng[7465]:   notice: clusterfence can fence (off) ma-host-5 (aka. 'i-03942144ed02ecd5d'): static-list
+May 08 07:23:42 ip-172-31-35-142.eu-west-1.compute.internal /fence_aws[23604]: SkipOsShutdown not supported with the current boto3 version 1.33.13 - falling back to graceful shutdown
+May 08 07:23:42 ip-172-31-35-142.eu-west-1.compute.internal /fence_aws[23604]: SkipOsShutdown not supported with the current boto3 version 1.33.13 - falling back to graceful shutdown
+May 08 07:23:43 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1428 fence status 5 receive -1 from 2 walltime 1778225023 local 1428
+May 08 07:23:44 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1429 fence status 5 receive -1 from 3 walltime 1778225024 local 1429
+May 08 07:23:45 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1430 fence status 5 receive -1 from 4 walltime 1778225025 local 1430
+May 08 07:23:45 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1430 fence request 5 pid 23682 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:23:46 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1431 fence result 5 pid 23682 result -1 term signal 6
+May 08 07:23:46 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1431 fence status 5 receive -1 from 1 walltime 1778225026 local 1431
+May 08 07:23:47 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1432 fence status 5 receive -1 from 2 walltime 1778225027 local 1432
+May 08 07:23:48 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1433 fence status 5 receive -1 from 3 walltime 1778225028 local 1433
+May 08 07:23:49 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1434 fence status 5 receive -1 from 4 walltime 1778225029 local 1434
+May 08 07:23:49 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1434 fence request 5 pid 23715 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:23:50 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1435 fence result 5 pid 23715 result -1 term signal 6
+May 08 07:23:50 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1435 fence status 5 receive -1 from 1 walltime 1778225030 local 1435
+May 08 07:23:51 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1436 fence status 5 receive -1 from 2 walltime 1778225031 local 1436
+May 08 07:23:52 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1437 fence status 5 receive -1 from 3 walltime 1778225032 local 1437
+May 08 07:23:53 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1438 fence status 5 receive -1 from 4 walltime 1778225033 local 1438
+May 08 07:23:53 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1438 fence request 5 pid 23789 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:23:54 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1439 fence result 5 pid 23789 result -1 term signal 6
+May 08 07:23:54 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1439 fence status 5 receive -1 from 1 walltime 1778225034 local 1439
+May 08 07:23:55 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1440 fence status 5 receive -1 from 2 walltime 1778225035 local 1440
+May 08 07:23:56 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1441 fence status 5 receive -1 from 3 walltime 1778225036 local 1441
+May 08 07:23:57 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1442 fence status 5 receive -1 from 4 walltime 1778225037 local 1442
+May 08 07:23:57 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1442 fence request 5 pid 23806 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:23:58 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1443 fence result 5 pid 23806 result -1 term signal 6
+May 08 07:23:58 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1443 fence status 5 receive -1 from 1 walltime 1778225038 local 1443
+May 08 07:23:59 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1444 fence status 5 receive -1 from 2 walltime 1778225039 local 1444
+May 08 07:24:00 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1445 fence status 5 receive -1 from 3 walltime 1778225040 local 1445
+May 08 07:24:01 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1446 fence status 5 receive -1 from 4 walltime 1778225041 local 1446
+May 08 07:24:01 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1446 fence request 5 pid 23832 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:24:02 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1447 fence result 5 pid 23832 result -1 term signal 6
+May 08 07:24:02 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1447 fence status 5 receive -1 from 1 walltime 1778225042 local 1447
+May 08 07:24:03 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1448 fence status 5 receive -1 from 2 walltime 1778225043 local 1448
+May 08 07:24:04 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1449 fence status 5 receive -1 from 3 walltime 1778225044 local 1449
+May 08 07:24:05 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1450 fence status 5 receive -1 from 4 walltime 1778225045 local 1450
+May 08 07:24:05 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1450 fence request 5 pid 23897 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:24:06 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1451 fence result 5 pid 23897 result -1 term signal 6
+May 08 07:24:06 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1451 fence status 5 receive -1 from 1 walltime 1778225046 local 1451
+May 08 07:24:07 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1452 fence status 5 receive -1 from 2 walltime 1778225047 local 1452
+May 08 07:24:08 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1453 fence status 5 receive -1 from 3 walltime 1778225048 local 1453
+May 08 07:24:09 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1454 fence status 5 receive -1 from 4 walltime 1778225049 local 1454
+May 08 07:24:09 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1454 fence request 5 pid 23914 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:24:10 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1455 fence result 5 pid 23914 result -1 term signal 6
+May 08 07:24:10 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1455 fence status 5 receive -1 from 1 walltime 1778225050 local 1455
+May 08 07:24:10 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1455 sharedFS wait for fencing
+May 08 07:24:10 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1455 clvmd wait for fencing
+May 08 07:24:11 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1456 fence status 5 receive -1 from 2 walltime 1778225051 local 1456
+May 08 07:24:12 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1457 fence status 5 receive -1 from 3 walltime 1778225052 local 1457
+May 08 07:24:13 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1458 fence status 5 receive -1 from 4 walltime 1778225053 local 1458
+May 08 07:24:13 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1458 fence request 5 pid 23977 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:24:14 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1459 fence result 5 pid 23977 result -1 term signal 6
+May 08 07:24:14 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1459 fence status 5 receive -1 from 1 walltime 1778225054 local 1459
+May 08 07:24:15 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1460 fence status 5 receive -1 from 2 walltime 1778225055 local 1460
+May 08 07:24:16 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1461 fence status 5 receive -1 from 3 walltime 1778225056 local 1461
+May 08 07:24:17 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1462 fence status 5 receive -1 from 4 walltime 1778225057 local 1462
+May 08 07:24:17 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1462 fence request 5 pid 24023 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:24:18 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1463 fence result 5 pid 24023 result -1 term signal 6
+May 08 07:24:18 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1463 fence status 5 receive -1 from 1 walltime 1778225058 local 1463
+May 08 07:24:19 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1464 fence status 5 receive -1 from 2 walltime 1778225059 local 1464
+May 08 07:24:20 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1465 fence status 5 receive -1 from 3 walltime 1778225060 local 1465
+May 08 07:24:21 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1466 fence status 5 receive -1 from 4 walltime 1778225061 local 1466
+May 08 07:24:21 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1466 fence request 5 pid 24057 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:24:22 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1467 fence result 5 pid 24057 result -1 term signal 6
+May 08 07:24:22 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1467 fence status 5 receive -1 from 1 walltime 1778225062 local 1467
+May 08 07:24:23 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1468 fence status 5 receive -1 from 2 walltime 1778225063 local 1468
+May 08 07:24:24 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1469 fence status 5 receive -1 from 3 walltime 1778225064 local 1469
+May 08 07:24:25 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1470 fence status 5 receive -1 from 4 walltime 1778225065 local 1470
+May 08 07:24:25 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1470 fence request 5 pid 24120 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:24:26 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1471 fence result 5 pid 24120 result -1 term signal 6
+May 08 07:24:26 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1471 fence status 5 receive -1 from 1 walltime 1778225066 local 1471
+May 08 07:24:27 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1472 fence status 5 receive -1 from 2 walltime 1778225067 local 1472
+May 08 07:24:28 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1473 fence status 5 receive -1 from 3 walltime 1778225068 local 1473
+May 08 07:24:29 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1474 fence status 5 receive -1 from 4 walltime 1778225069 local 1474
+May 08 07:24:29 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1474 fence request 5 pid 24143 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:24:30 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1475 fence result 5 pid 24143 result -1 term signal 6
+May 08 07:24:30 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1475 fence status 5 receive -1 from 1 walltime 1778225070 local 1475
+May 08 07:24:31 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1476 fence status 5 receive -1 from 2 walltime 1778225071 local 1476
+May 08 07:24:32 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1477 fence status 5 receive -1 from 3 walltime 1778225072 local 1477
+May 08 07:24:33 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1478 fence status 5 receive -1 from 4 walltime 1778225073 local 1478
+May 08 07:24:33 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1478 fence request 5 pid 24207 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:24:34 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1479 fence result 5 pid 24207 result -1 term signal 6
+May 08 07:24:34 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1479 fence status 5 receive -1 from 1 walltime 1778225074 local 1479
+May 08 07:24:35 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1480 fence status 5 receive -1 from 2 walltime 1778225075 local 1480
+May 08 07:24:36 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1481 fence status 5 receive -1 from 3 walltime 1778225076 local 1481
+May 08 07:24:37 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1482 fence status 5 receive -1 from 4 walltime 1778225077 local 1482
+May 08 07:24:37 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1482 fence request 5 pid 24229 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:24:38 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1483 fence result 5 pid 24229 result -1 term signal 6
+May 08 07:24:38 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1483 fence status 5 receive -1 from 1 walltime 1778225078 local 1483
+May 08 07:24:39 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1484 fence status 5 receive -1 from 2 walltime 1778225079 local 1484
+May 08 07:24:40 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1485 fence status 5 receive -1 from 3 walltime 1778225080 local 1485
+May 08 07:24:41 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1486 fence status 5 receive -1 from 4 walltime 1778225081 local 1486
+May 08 07:24:41 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1486 fence request 5 pid 24251 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:24:42 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1487 fence result 5 pid 24251 result -1 term signal 6
+May 08 07:24:42 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1487 fence status 5 receive -1 from 1 walltime 1778225082 local 1487
+May 08 07:24:43 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1488 fence status 5 receive -1 from 2 walltime 1778225083 local 1488
+May 08 07:24:44 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1489 fence status 5 receive -1 from 3 walltime 1778225084 local 1489
+May 08 07:24:45 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1490 fence status 5 receive -1 from 4 walltime 1778225085 local 1490
+May 08 07:24:45 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1490 fence request 5 pid 24331 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:24:46 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1491 fence result 5 pid 24331 result -1 term signal 6
+May 08 07:24:46 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1491 fence status 5 receive -1 from 1 walltime 1778225086 local 1491
+May 08 07:24:47 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1492 fence status 5 receive -1 from 2 walltime 1778225087 local 1492
+May 08 07:24:48 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1493 fence status 5 receive -1 from 3 walltime 1778225088 local 1493
+May 08 07:24:49 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1494 fence status 5 receive -1 from 4 walltime 1778225089 local 1494
+May 08 07:24:49 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1494 fence request 5 pid 24355 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:24:50 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1495 fence result 5 pid 24355 result -1 term signal 6
+May 08 07:24:50 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1495 fence status 5 receive -1 from 1 walltime 1778225090 local 1495
+May 08 07:24:51 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1496 fence status 5 receive -1 from 2 walltime 1778225091 local 1496
+May 08 07:24:52 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1497 fence status 5 receive -1 from 3 walltime 1778225092 local 1497
+May 08 07:24:53 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1498 fence status 5 receive -1 from 4 walltime 1778225093 local 1498
+May 08 07:24:53 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1498 fence request 5 pid 24434 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:24:54 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1499 fence result 5 pid 24434 result -1 term signal 6
+May 08 07:24:54 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1499 fence status 5 receive -1 from 1 walltime 1778225094 local 1499
+May 08 07:24:55 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1500 fence status 5 receive -1 from 2 walltime 1778225095 local 1500
+May 08 07:24:56 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1501 fence status 5 receive -1 from 3 walltime 1778225096 local 1501
+May 08 07:24:57 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1502 fence status 5 receive -1 from 4 walltime 1778225097 local 1502
+May 08 07:24:57 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1502 fence request 5 pid 24451 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:24:58 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1503 fence result 5 pid 24451 result -1 term signal 6
+May 08 07:24:58 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1503 fence status 5 receive -1 from 1 walltime 1778225098 local 1503
+May 08 07:24:59 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1504 fence status 5 receive -1 from 2 walltime 1778225099 local 1504
+May 08 07:25:00 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1505 fence status 5 receive -1 from 3 walltime 1778225100 local 1505
+May 08 07:25:01 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1506 fence status 5 receive -1 from 4 walltime 1778225101 local 1506
+May 08 07:25:01 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1506 fence request 5 pid 24479 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:25:02 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1507 fence result 5 pid 24479 result -1 term signal 6
+May 08 07:25:02 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1507 fence status 5 receive -1 from 1 walltime 1778225102 local 1507
+May 08 07:25:03 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1508 fence status 5 receive -1 from 2 walltime 1778225103 local 1508
+May 08 07:25:04 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1509 fence status 5 receive -1 from 3 walltime 1778225104 local 1509
+May 08 07:25:05 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1510 fence status 5 receive -1 from 4 walltime 1778225105 local 1510
+May 08 07:25:05 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1510 fence request 5 pid 24542 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:25:06 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1511 fence result 5 pid 24542 result -1 term signal 6
+May 08 07:25:06 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1511 fence status 5 receive -1 from 1 walltime 1778225106 local 1511
+May 08 07:25:07 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1512 fence status 5 receive -1 from 2 walltime 1778225107 local 1512
+May 08 07:25:08 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1513 fence status 5 receive -1 from 3 walltime 1778225108 local 1513
+May 08 07:25:09 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1514 fence status 5 receive -1 from 4 walltime 1778225109 local 1514
+May 08 07:25:09 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1514 fence request 5 pid 24559 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:25:10 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1515 fence result 5 pid 24559 result -1 term signal 6
+May 08 07:25:10 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1515 fence status 5 receive -1 from 1 walltime 1778225110 local 1515
+May 08 07:25:11 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1516 fence status 5 receive -1 from 2 walltime 1778225111 local 1516
+May 08 07:25:12 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1517 fence status 5 receive -1 from 3 walltime 1778225112 local 1517
+May 08 07:25:13 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1518 fence status 5 receive -1 from 4 walltime 1778225113 local 1518
+May 08 07:25:13 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1518 fence request 5 pid 24623 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:25:14 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1519 fence result 5 pid 24623 result -1 term signal 6
+May 08 07:25:14 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1519 fence status 5 receive -1 from 1 walltime 1778225114 local 1519
+May 08 07:25:15 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1520 fence status 5 receive -1 from 2 walltime 1778225115 local 1520
+May 08 07:25:16 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1521 fence status 5 receive -1 from 3 walltime 1778225116 local 1521
+May 08 07:25:17 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1522 fence status 5 receive -1 from 4 walltime 1778225117 local 1522
+May 08 07:25:17 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1522 fence request 5 pid 24669 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:25:18 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1523 fence result 5 pid 24669 result -1 term signal 6
+May 08 07:25:18 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1523 fence status 5 receive -1 from 1 walltime 1778225118 local 1523
+May 08 07:25:19 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1524 fence status 5 receive -1 from 2 walltime 1778225119 local 1524
+May 08 07:25:20 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1525 fence status 5 receive -1 from 3 walltime 1778225120 local 1525
+May 08 07:25:21 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1526 fence status 5 receive -1 from 4 walltime 1778225121 local 1526
+May 08 07:25:21 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1526 fence request 5 pid 24702 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:25:22 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1527 fence result 5 pid 24702 result -1 term signal 6
+May 08 07:25:22 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1527 fence status 5 receive -1 from 1 walltime 1778225122 local 1527
+May 08 07:25:23 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1528 fence status 5 receive -1 from 2 walltime 1778225123 local 1528
+May 08 07:25:24 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1529 fence status 5 receive -1 from 3 walltime 1778225124 local 1529
+May 08 07:25:25 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1530 fence status 5 receive -1 from 4 walltime 1778225125 local 1530
+May 08 07:25:25 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1530 fence request 5 pid 24765 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:25:26 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1531 fence result 5 pid 24765 result -1 term signal 6
+May 08 07:25:26 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1531 fence status 5 receive -1 from 1 walltime 1778225126 local 1531
+May 08 07:25:27 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1532 fence status 5 receive -1 from 2 walltime 1778225127 local 1532
+May 08 07:25:28 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1533 fence status 5 receive -1 from 3 walltime 1778225128 local 1533
+May 08 07:25:29 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1534 fence status 5 receive -1 from 4 walltime 1778225129 local 1534
+May 08 07:25:29 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1534 fence request 5 pid 24792 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:25:30 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1535 fence result 5 pid 24792 result -1 term signal 6
+May 08 07:25:30 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1535 fence status 5 receive -1 from 1 walltime 1778225130 local 1535
+May 08 07:25:31 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1536 fence status 5 receive -1 from 2 walltime 1778225131 local 1536
+May 08 07:25:32 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1537 fence status 5 receive -1 from 3 walltime 1778225132 local 1537
+May 08 07:25:33 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1538 fence status 5 receive -1 from 4 walltime 1778225133 local 1538
+May 08 07:25:33 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1538 fence request 5 pid 24852 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:25:34 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1539 fence result 5 pid 24852 result -1 term signal 6
+May 08 07:25:34 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1539 fence status 5 receive -1 from 1 walltime 1778225134 local 1539
+May 08 07:25:35 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1540 fence status 5 receive -1 from 2 walltime 1778225135 local 1540
+May 08 07:25:36 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1541 fence status 5 receive -1 from 3 walltime 1778225136 local 1541
+May 08 07:25:37 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1542 fence status 5 receive -1 from 4 walltime 1778225137 local 1542
+May 08 07:25:37 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1542 fence request 5 pid 24875 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:25:38 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1543 fence result 5 pid 24875 result -1 term signal 6
+May 08 07:25:38 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1543 fence status 5 receive -1 from 1 walltime 1778225138 local 1543
+May 08 07:25:39 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1544 fence status 5 receive -1 from 2 walltime 1778225139 local 1544
+May 08 07:25:40 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1545 fence status 5 receive -1 from 3 walltime 1778225140 local 1545
+May 08 07:25:41 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1546 fence status 5 receive -1 from 4 walltime 1778225141 local 1546
+May 08 07:25:41 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1546 fence request 5 pid 24897 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:25:42 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1547 fence result 5 pid 24897 result -1 term signal 6
+May 08 07:25:42 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1547 fence status 5 receive -1 from 1 walltime 1778225142 local 1547
+May 08 07:25:43 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1548 fence status 5 receive -1 from 2 walltime 1778225143 local 1548
+May 08 07:25:44 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1549 fence status 5 receive -1 from 3 walltime 1778225144 local 1549
+May 08 07:25:45 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1550 fence status 5 receive -1 from 4 walltime 1778225145 local 1550
+May 08 07:25:45 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1550 fence request 5 pid 24979 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:25:46 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1551 fence result 5 pid 24979 result -1 term signal 6
+May 08 07:25:46 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1551 fence status 5 receive -1 from 1 walltime 1778225146 local 1551
+May 08 07:25:47 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1552 fence status 5 receive -1 from 2 walltime 1778225147 local 1552
+May 08 07:25:48 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1554 fence status 5 receive -1 from 3 walltime 1778225148 local 1554
+May 08 07:25:49 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1555 fence status 5 receive -1 from 4 walltime 1778225149 local 1555
+May 08 07:25:49 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1555 fence request 5 pid 25001 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:25:50 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1556 fence result 5 pid 25001 result -1 term signal 6
+May 08 07:25:50 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1556 fence status 5 receive -1 from 1 walltime 1778225150 local 1556
+May 08 07:25:51 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1557 fence status 5 receive -1 from 2 walltime 1778225151 local 1557
+May 08 07:25:52 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1558 fence status 5 receive -1 from 3 walltime 1778225152 local 1558
+May 08 07:25:53 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1559 fence status 5 receive -1 from 4 walltime 1778225153 local 1559
+May 08 07:25:53 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1559 fence request 5 pid 25080 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:25:54 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1560 fence result 5 pid 25080 result -1 term signal 6
+May 08 07:25:54 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1560 fence status 5 receive -1 from 1 walltime 1778225154 local 1560
+May 08 07:25:55 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1561 fence status 5 receive -1 from 2 walltime 1778225155 local 1561
+May 08 07:25:56 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1562 fence status 5 receive -1 from 3 walltime 1778225156 local 1562
+May 08 07:25:57 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1563 fence status 5 receive -1 from 4 walltime 1778225157 local 1563
+May 08 07:25:57 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1563 fence request 5 pid 25097 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:25:58 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1564 fence result 5 pid 25097 result -1 term signal 6
+May 08 07:25:58 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1564 fence status 5 receive -1 from 1 walltime 1778225158 local 1564
+May 08 07:25:59 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1565 fence status 5 receive -1 from 2 walltime 1778225159 local 1565
+May 08 07:26:00 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1566 fence status 5 receive -1 from 3 walltime 1778225160 local 1566
+May 08 07:26:01 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1567 fence status 5 receive -1 from 4 walltime 1778225161 local 1567
+May 08 07:26:01 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1567 fence request 5 pid 25125 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:26:02 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1568 fence result 5 pid 25125 result -1 term signal 6
+May 08 07:26:02 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1568 fence status 5 receive -1 from 1 walltime 1778225162 local 1568
+May 08 07:26:03 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1569 fence status 5 receive -1 from 2 walltime 1778225163 local 1569
+May 08 07:26:04 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1570 fence status 5 receive -1 from 3 walltime 1778225164 local 1570
+May 08 07:26:05 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1571 fence status 5 receive -1 from 4 walltime 1778225165 local 1571
+May 08 07:26:05 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1571 fence request 5 pid 25188 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:26:06 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1572 fence result 5 pid 25188 result -1 term signal 6
+May 08 07:26:06 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1572 fence status 5 receive -1 from 1 walltime 1778225166 local 1572
+May 08 07:26:07 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1573 fence status 5 receive -1 from 2 walltime 1778225167 local 1573
+May 08 07:26:08 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1574 fence status 5 receive -1 from 3 walltime 1778225168 local 1574
+May 08 07:26:09 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1575 fence status 5 receive -1 from 4 walltime 1778225169 local 1575
+May 08 07:26:09 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1575 fence request 5 pid 25205 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:26:10 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1576 fence result 5 pid 25205 result -1 term signal 6
+May 08 07:26:10 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1576 fence status 5 receive -1 from 1 walltime 1778225170 local 1576
+May 08 07:26:11 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1577 fence status 5 receive -1 from 2 walltime 1778225171 local 1577
+May 08 07:26:12 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1578 fence status 5 receive -1 from 3 walltime 1778225172 local 1578
+May 08 07:26:13 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1579 fence status 5 receive -1 from 4 walltime 1778225173 local 1579
+May 08 07:26:13 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1579 fence request 5 pid 25274 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:26:14 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1580 fence result 5 pid 25274 result -1 term signal 6
+May 08 07:26:14 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1580 fence status 5 receive -1 from 1 walltime 1778225174 local 1580
+May 08 07:26:15 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1581 fence status 5 receive -1 from 2 walltime 1778225175 local 1581
+May 08 07:26:16 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1582 fence status 5 receive -1 from 3 walltime 1778225176 local 1582
+May 08 07:26:17 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1583 fence status 5 receive -1 from 4 walltime 1778225177 local 1583
+May 08 07:26:17 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1583 fence request 5 pid 25314 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:26:18 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1584 fence result 5 pid 25314 result -1 term signal 6
+May 08 07:26:18 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1584 fence status 5 receive -1 from 1 walltime 1778225178 local 1584
+May 08 07:26:19 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1585 fence status 5 receive -1 from 2 walltime 1778225179 local 1585
+May 08 07:26:20 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1586 fence status 5 receive -1 from 3 walltime 1778225180 local 1586
+May 08 07:26:21 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1587 fence status 5 receive -1 from 4 walltime 1778225181 local 1587
+May 08 07:26:21 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1587 fence request 5 pid 25347 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:26:22 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1588 fence result 5 pid 25347 result -1 term signal 6
+May 08 07:26:22 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1588 fence status 5 receive -1 from 1 walltime 1778225182 local 1588
+May 08 07:26:23 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1589 fence status 5 receive -1 from 2 walltime 1778225183 local 1589
+May 08 07:26:24 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1590 fence status 5 receive -1 from 3 walltime 1778225184 local 1590
+May 08 07:26:25 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1591 fence status 5 receive -1 from 4 walltime 1778225185 local 1591
+May 08 07:26:25 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1591 fence request 5 pid 25410 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:26:26 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1592 fence result 5 pid 25410 result -1 term signal 6
+May 08 07:26:26 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1592 fence status 5 receive -1 from 1 walltime 1778225186 local 1592
+May 08 07:26:27 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1593 fence status 5 receive -1 from 2 walltime 1778225187 local 1593
+May 08 07:26:28 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1594 fence status 5 receive -1 from 3 walltime 1778225188 local 1594
+May 08 07:26:29 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1595 fence status 5 receive -1 from 4 walltime 1778225189 local 1595
+May 08 07:26:29 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1595 fence request 5 pid 25439 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:26:30 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1596 fence result 5 pid 25439 result -1 term signal 6
+May 08 07:26:30 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1596 fence status 5 receive -1 from 1 walltime 1778225190 local 1596
+May 08 07:26:31 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1597 fence status 5 receive -1 from 2 walltime 1778225191 local 1597
+May 08 07:26:32 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1598 fence status 5 receive -1 from 3 walltime 1778225192 local 1598
+May 08 07:26:33 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1599 fence status 5 receive -1 from 4 walltime 1778225193 local 1599
+May 08 07:26:33 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1599 fence request 5 pid 25497 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:26:34 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1600 fence result 5 pid 25497 result -1 term signal 6
+May 08 07:26:34 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1600 fence status 5 receive -1 from 1 walltime 1778225194 local 1600
+May 08 07:26:35 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1601 fence status 5 receive -1 from 2 walltime 1778225195 local 1601
+May 08 07:26:36 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1602 fence status 5 receive -1 from 3 walltime 1778225196 local 1602
+May 08 07:26:38 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1603 fence status 5 receive -1 from 4 walltime 1778225198 local 1603
+May 08 07:26:38 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1603 fence request 5 pid 25517 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:26:39 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1604 fence result 5 pid 25517 result -1 term signal 6
+May 08 07:26:39 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1604 fence status 5 receive -1 from 1 walltime 1778225199 local 1604
+May 08 07:26:40 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1605 fence status 5 receive -1 from 2 walltime 1778225200 local 1605
+May 08 07:26:41 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1606 fence status 5 receive -1 from 3 walltime 1778225201 local 1606
+May 08 07:26:42 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1607 fence status 5 receive -1 from 4 walltime 1778225202 local 1607
+May 08 07:26:42 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1607 fence request 5 pid 25545 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:26:43 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1608 fence result 5 pid 25545 result -1 term signal 6
+May 08 07:26:43 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1608 fence status 5 receive -1 from 1 walltime 1778225203 local 1608
+May 08 07:26:44 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1609 fence status 5 receive -1 from 2 walltime 1778225204 local 1609
+May 08 07:26:45 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1610 fence status 5 receive -1 from 3 walltime 1778225205 local 1610
+May 08 07:26:46 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1611 fence status 5 receive -1 from 4 walltime 1778225206 local 1611
+May 08 07:26:46 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1611 fence request 5 pid 25623 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:26:47 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1612 fence result 5 pid 25623 result -1 term signal 6
+May 08 07:26:47 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1612 fence status 5 receive -1 from 1 walltime 1778225207 local 1612
+May 08 07:26:48 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1613 fence status 5 receive -1 from 2 walltime 1778225208 local 1613
+May 08 07:26:49 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1614 fence status 5 receive -1 from 3 walltime 1778225209 local 1614
+May 08 07:26:50 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1615 fence status 5 receive -1 from 4 walltime 1778225210 local 1615
+May 08 07:26:50 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1615 fence request 5 pid 25640 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:26:51 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1616 fence result 5 pid 25640 result -1 term signal 6
+May 08 07:26:51 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1616 fence status 5 receive -1 from 1 walltime 1778225211 local 1616
+May 08 07:26:52 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1617 fence status 5 receive -1 from 2 walltime 1778225212 local 1617
+May 08 07:26:53 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1618 fence status 5 receive -1 from 3 walltime 1778225213 local 1618
+May 08 07:26:54 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1619 fence status 5 receive -1 from 4 walltime 1778225214 local 1619
+May 08 07:26:54 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1619 fence request 5 pid 25724 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:26:55 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1620 fence result 5 pid 25724 result -1 term signal 6
+May 08 07:26:55 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1620 fence status 5 receive -1 from 1 walltime 1778225215 local 1620
+May 08 07:26:56 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1621 fence status 5 receive -1 from 2 walltime 1778225216 local 1621
+May 08 07:26:57 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1622 fence status 5 receive -1 from 3 walltime 1778225217 local 1622
+May 08 07:26:58 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1623 fence status 5 receive -1 from 4 walltime 1778225218 local 1623
+May 08 07:26:58 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1623 fence request 5 pid 25747 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:26:59 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1624 fence result 5 pid 25747 result -1 term signal 6
+May 08 07:26:59 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1624 fence status 5 receive -1 from 1 walltime 1778225219 local 1624
+May 08 07:27:00 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1625 fence status 5 receive -1 from 2 walltime 1778225220 local 1625
+May 08 07:27:01 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1626 fence status 5 receive -1 from 3 walltime 1778225221 local 1626
+May 08 07:27:02 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1627 fence status 5 receive -1 from 4 walltime 1778225222 local 1627
+May 08 07:27:02 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1627 fence request 5 pid 25764 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:27:03 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1628 fence result 5 pid 25764 result -1 term signal 6
+May 08 07:27:03 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1628 fence status 5 receive -1 from 1 walltime 1778225223 local 1628
+May 08 07:27:04 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1629 fence status 5 receive -1 from 2 walltime 1778225224 local 1629
+May 08 07:27:05 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1630 fence status 5 receive -1 from 3 walltime 1778225225 local 1630
+May 08 07:27:06 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1631 fence status 5 receive -1 from 4 walltime 1778225226 local 1631
+May 08 07:27:06 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1631 fence request 5 pid 25832 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:27:07 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1632 fence result 5 pid 25832 result -1 term signal 6
+May 08 07:27:07 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1632 fence status 5 receive -1 from 1 walltime 1778225227 local 1632
+May 08 07:27:08 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1633 fence status 5 receive -1 from 2 walltime 1778225228 local 1633
+May 08 07:27:09 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1634 fence status 5 receive -1 from 3 walltime 1778225229 local 1634
+May 08 07:27:10 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1635 fence status 5 receive -1 from 4 walltime 1778225230 local 1635
+May 08 07:27:10 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1635 fence request 5 pid 25849 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:27:11 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1636 fence result 5 pid 25849 result -1 term signal 6
+May 08 07:27:11 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1636 fence status 5 receive -1 from 1 walltime 1778225231 local 1636
+May 08 07:27:12 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1637 fence status 5 receive -1 from 2 walltime 1778225232 local 1637
+May 08 07:27:13 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1638 fence status 5 receive -1 from 3 walltime 1778225233 local 1638
+May 08 07:27:14 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1639 fence status 5 receive -1 from 4 walltime 1778225234 local 1639
+May 08 07:27:14 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1639 fence request 5 pid 25931 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:27:15 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1640 fence result 5 pid 25931 result -1 term signal 6
+May 08 07:27:15 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1640 fence status 5 receive -1 from 1 walltime 1778225235 local 1640
+May 08 07:27:16 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1641 fence status 5 receive -1 from 2 walltime 1778225236 local 1641
+May 08 07:27:17 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1642 fence status 5 receive -1 from 3 walltime 1778225237 local 1642
+May 08 07:27:18 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1643 fence status 5 receive -1 from 4 walltime 1778225238 local 1643
+May 08 07:27:18 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1643 fence request 5 pid 25958 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:27:19 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1644 fence result 5 pid 25958 result -1 term signal 6
+May 08 07:27:19 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1644 fence status 5 receive -1 from 1 walltime 1778225239 local 1644
+May 08 07:27:20 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1645 fence status 5 receive -1 from 2 walltime 1778225240 local 1645
+May 08 07:27:21 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1646 fence status 5 receive -1 from 3 walltime 1778225241 local 1646
+May 08 07:27:22 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1647 fence status 5 receive -1 from 4 walltime 1778225242 local 1647
+May 08 07:27:22 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1647 fence request 5 pid 25991 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:27:23 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1648 fence result 5 pid 25991 result -1 term signal 6
+May 08 07:27:23 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1648 fence status 5 receive -1 from 1 walltime 1778225243 local 1648
+May 08 07:27:24 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1649 fence status 5 receive -1 from 2 walltime 1778225244 local 1649
+May 08 07:27:25 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1650 fence status 5 receive -1 from 3 walltime 1778225245 local 1650
+May 08 07:27:26 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1651 fence status 5 receive -1 from 4 walltime 1778225246 local 1651
+May 08 07:27:26 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1651 fence request 5 pid 26055 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:27:27 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1652 fence result 5 pid 26055 result -1 term signal 6
+May 08 07:27:27 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1652 fence status 5 receive -1 from 1 walltime 1778225247 local 1652
+May 08 07:27:28 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1653 fence status 5 receive -1 from 2 walltime 1778225248 local 1653
+May 08 07:27:29 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1654 fence status 5 receive -1 from 3 walltime 1778225249 local 1654
+May 08 07:27:30 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1655 fence status 5 receive -1 from 4 walltime 1778225250 local 1655
+May 08 07:27:30 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1655 fence request 5 pid 26082 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:27:31 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1656 fence result 5 pid 26082 result -1 term signal 6
+May 08 07:27:31 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1656 fence status 5 receive -1 from 1 walltime 1778225251 local 1656
+May 08 07:27:32 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1657 fence status 5 receive -1 from 2 walltime 1778225252 local 1657
+May 08 07:27:33 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1658 fence status 5 receive -1 from 3 walltime 1778225253 local 1658
+May 08 07:27:34 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1659 fence status 5 receive -1 from 4 walltime 1778225254 local 1659
+May 08 07:27:34 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1659 fence request 5 pid 26141 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:27:35 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1660 fence result 5 pid 26141 result -1 term signal 6
+May 08 07:27:35 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1660 fence status 5 receive -1 from 1 walltime 1778225255 local 1660
+May 08 07:27:36 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1661 fence status 5 receive -1 from 2 walltime 1778225256 local 1661
+May 08 07:27:37 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1662 fence status 5 receive -1 from 3 walltime 1778225257 local 1662
+May 08 07:27:38 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1663 fence status 5 receive -1 from 4 walltime 1778225258 local 1663
+May 08 07:27:38 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1663 fence request 5 pid 26158 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:27:39 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1664 fence result 5 pid 26158 result -1 term signal 6
+May 08 07:27:39 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1664 fence status 5 receive -1 from 1 walltime 1778225259 local 1664
+May 08 07:27:40 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1665 fence status 5 receive -1 from 2 walltime 1778225260 local 1665
+May 08 07:27:41 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1666 fence status 5 receive -1 from 3 walltime 1778225261 local 1666
+May 08 07:27:42 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1667 fence status 5 receive -1 from 4 walltime 1778225262 local 1667
+May 08 07:27:42 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1667 fence request 5 pid 26191 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:27:43 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1668 fence result 5 pid 26191 result -1 term signal 6
+May 08 07:27:43 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1668 fence status 5 receive -1 from 1 walltime 1778225263 local 1668
+May 08 07:27:44 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1669 fence status 5 receive -1 from 2 walltime 1778225264 local 1669
+May 08 07:27:45 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1670 fence status 5 receive -1 from 3 walltime 1778225265 local 1670
+May 08 07:27:46 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1671 fence status 5 receive -1 from 4 walltime 1778225266 local 1671
+May 08 07:27:46 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1671 fence request 5 pid 26267 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:27:47 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1672 fence result 5 pid 26267 result -1 term signal 6
+May 08 07:27:47 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1672 fence status 5 receive -1 from 1 walltime 1778225267 local 1672
+May 08 07:27:48 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1673 fence status 5 receive -1 from 2 walltime 1778225268 local 1673
+May 08 07:27:49 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1674 fence status 5 receive -1 from 3 walltime 1778225269 local 1674
+May 08 07:27:50 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1675 fence status 5 receive -1 from 4 walltime 1778225270 local 1675
+May 08 07:27:50 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1675 fence request 5 pid 26284 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:27:51 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1676 fence result 5 pid 26284 result -1 term signal 6
+May 08 07:27:51 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1676 fence status 5 receive -1 from 1 walltime 1778225271 local 1676
+May 08 07:27:52 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1677 fence status 5 receive -1 from 2 walltime 1778225272 local 1677
+May 08 07:27:53 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1678 fence status 5 receive -1 from 3 walltime 1778225273 local 1678
+May 08 07:27:54 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1679 fence status 5 receive -1 from 4 walltime 1778225274 local 1679
+May 08 07:27:54 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1679 fence request 5 pid 26368 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:27:55 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1680 fence result 5 pid 26368 result -1 term signal 6
+May 08 07:27:55 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1680 fence status 5 receive -1 from 1 walltime 1778225275 local 1680
+May 08 07:27:56 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1681 fence status 5 receive -1 from 2 walltime 1778225276 local 1681
+May 08 07:27:57 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1682 fence status 5 receive -1 from 3 walltime 1778225277 local 1682
+May 08 07:27:58 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1683 fence status 5 receive -1 from 4 walltime 1778225278 local 1683
+May 08 07:27:58 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1683 fence request 5 pid 26391 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:27:59 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1684 fence result 5 pid 26391 result -1 term signal 6
+May 08 07:27:59 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1684 fence status 5 receive -1 from 1 walltime 1778225279 local 1684
+May 08 07:28:00 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1685 fence status 5 receive -1 from 2 walltime 1778225280 local 1685
+May 08 07:28:01 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1686 fence status 5 receive -1 from 3 walltime 1778225281 local 1686
+May 08 07:28:02 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1687 fence status 5 receive -1 from 4 walltime 1778225282 local 1687
+May 08 07:28:02 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1687 fence request 5 pid 26408 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:28:03 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1688 fence result 5 pid 26408 result -1 term signal 6
+May 08 07:28:03 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1688 fence status 5 receive -1 from 1 walltime 1778225283 local 1688
+May 08 07:28:04 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1689 fence status 5 receive -1 from 2 walltime 1778225284 local 1689
+May 08 07:28:05 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1690 fence status 5 receive -1 from 3 walltime 1778225285 local 1690
+May 08 07:28:06 ip-172-31-35-142.eu-west-1.compute.internal stonith-ng[7465]:   notice: fence_aws_off_1:23604:stderr [ /usr/lib/python3.7/site-packages/boto3/compat.py:82: PythonDeprecationWarning: Boto3 will no longer support Python 3.7 starting December 13, 2023. To continue receiving service updates, bug fixes, and security updates please upgrade to Python 3.8 or later. More information can be found here: https://aws.amazon.com/blogs/developer/python-support-policy-updates-for-aws-sdks-and-tools/ ]
+May 08 07:28:06 ip-172-31-35-142.eu-west-1.compute.internal stonith-ng[7465]:   notice: fence_aws_off_1:23604:stderr [   warnings.warn(warning, PythonDeprecationWarning) ]
+May 08 07:28:06 ip-172-31-35-142.eu-west-1.compute.internal stonith-ng[7465]:   notice: fence_aws_off_1:23604:stderr [ 2026-05-08 07:23:42,709 WARNING: SkipOsShutdown not supported with the current boto3 version 1.33.13 - falling back to graceful shutdown ]
+May 08 07:28:06 ip-172-31-35-142.eu-west-1.compute.internal stonith-ng[7465]:  warning: fence_aws[23604] stderr: [ /usr/lib/python3.7/site-packages/boto3/compat.py:82: PythonDeprecationWarning: Boto3 will no longer support Python 3.7 starting December 13, 2023. To continue receiving service updates, bug fixes, and security updates please upgrade to Python 3.8 or later. More information can be found here: https://aws.amazon.com/blogs/developer/python-support-policy-updates-for-aws-sdks-and-tools/ ]
+May 08 07:28:06 ip-172-31-35-142.eu-west-1.compute.internal stonith-ng[7465]:  warning: fence_aws[23604] stderr: [   warnings.warn(warning, PythonDeprecationWarning) ]
+May 08 07:28:06 ip-172-31-35-142.eu-west-1.compute.internal stonith-ng[7465]:  warning: fence_aws[23604] stderr: [ 2026-05-08 07:23:42,709 WARNING: SkipOsShutdown not supported with the current boto3 version 1.33.13 - falling back to graceful shutdown ]
+May 08 07:28:06 ip-172-31-35-142.eu-west-1.compute.internal stonith-ng[7465]:   notice: Operation 'off' [23604] (call 3 from crmd.7258) for host 'ma-host-5' with device 'clusterfence' returned: 0 (OK)
+May 08 07:28:06 ip-172-31-35-142.eu-west-1.compute.internal stonith-ng[7465]:   notice: Operation 'off' targeting ma-host-5 on ma-host-1 for crmd.7258@ma-host-4.5a7fba35: OK
+May 08 07:28:06 ip-172-31-35-142.eu-west-1.compute.internal crmd[7469]:   notice: Peer ma-host-5 was terminated (off) by ma-host-1 on behalf of crmd.7258: OK
+May 08 07:28:06 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1691 fence status 5 receive -1 from 4 walltime 1778225286 local 1691
+May 08 07:28:06 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1691 fence request 5 pid 26479 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:28:06 ip-172-31-35-142.eu-west-1.compute.internal stonith-ng[7465]:   notice: fence_aws_monitor_1:26476:stderr [ /usr/lib/python3.7/site-packages/boto3/compat.py:82: PythonDeprecationWarning: Boto3 will no longer support Python 3.7 starting December 13, 2023. To continue receiving service updates, bug fixes, and security updates please upgrade to Python 3.8 or later. More information can be found here: https://aws.amazon.com/blogs/developer/python-support-policy-updates-for-aws-sdks-and-tools/ ]
+May 08 07:28:06 ip-172-31-35-142.eu-west-1.compute.internal stonith-ng[7465]:   notice: fence_aws_monitor_1:26476:stderr [   warnings.warn(warning, PythonDeprecationWarning) ]
+May 08 07:28:06 ip-172-31-35-142.eu-west-1.compute.internal stonith-ng[7465]:  warning: fence_aws[26476] stderr: [ /usr/lib/python3.7/site-packages/boto3/compat.py:82: PythonDeprecationWarning: Boto3 will no longer support Python 3.7 starting December 13, 2023. To continue receiving service updates, bug fixes, and security updates please upgrade to Python 3.8 or later. More information can be found here: https://aws.amazon.com/blogs/developer/python-support-policy-updates-for-aws-sdks-and-tools/ ]
+May 08 07:28:06 ip-172-31-35-142.eu-west-1.compute.internal stonith-ng[7465]:  warning: fence_aws[26476] stderr: [   warnings.warn(warning, PythonDeprecationWarning) ]
+May 08 07:28:07 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1692 fence result 5 pid 26479 result -1 term signal 6
+May 08 07:28:07 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1692 fence status 5 receive -1 from 1 walltime 1778225287 local 1692
+May 08 07:28:08 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1693 fence status 5 receive -1 from 2 walltime 1778225288 local 1693
+May 08 07:28:09 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1694 fence status 5 receive -1 from 3 walltime 1778225289 local 1694
+May 08 07:28:10 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1695 fence status 5 receive -1 from 4 walltime 1778225290 local 1695
+May 08 07:28:10 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1695 fence request 5 pid 26502 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:28:11 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1696 fence result 5 pid 26502 result -1 term signal 6
+May 08 07:28:11 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1696 fence status 5 receive -1 from 1 walltime 1778225291 local 1696
+May 08 07:28:12 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1697 fence status 5 receive -1 from 2 walltime 1778225292 local 1697
+May 08 07:28:13 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1698 fence status 5 receive -1 from 3 walltime 1778225293 local 1698
+May 08 07:28:14 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1699 fence status 5 receive -1 from 4 walltime 1778225294 local 1699
+May 08 07:28:14 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1699 fence request 5 pid 26578 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:28:15 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1700 fence result 5 pid 26578 result -1 term signal 6
+May 08 07:28:15 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1700 fence status 5 receive -1 from 1 walltime 1778225295 local 1700
+May 08 07:28:16 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1701 fence status 5 receive -1 from 2 walltime 1778225296 local 1701
+May 08 07:28:17 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1702 fence status 5 receive -1 from 3 walltime 1778225297 local 1702
+May 08 07:28:18 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1703 fence status 5 receive -1 from 4 walltime 1778225298 local 1703
+May 08 07:28:18 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1703 fence request 5 pid 26605 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:28:19 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1704 fence result 5 pid 26605 result -1 term signal 6
+May 08 07:28:19 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1704 fence status 5 receive -1 from 1 walltime 1778225299 local 1704
+May 08 07:28:20 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1705 fence status 5 receive -1 from 2 walltime 1778225300 local 1705
+May 08 07:28:21 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1706 fence status 5 receive -1 from 3 walltime 1778225301 local 1706
+May 08 07:28:22 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1707 fence status 5 receive -1 from 4 walltime 1778225302 local 1707
+May 08 07:28:22 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1707 fence request 5 pid 26638 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:28:23 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1708 fence result 5 pid 26638 result -1 term signal 6
+May 08 07:28:23 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1708 fence status 5 receive -1 from 1 walltime 1778225303 local 1708
+May 08 07:28:24 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1709 fence status 5 receive -1 from 2 walltime 1778225304 local 1709
+May 08 07:28:25 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1710 fence status 5 receive -1 from 3 walltime 1778225305 local 1710
+May 08 07:28:26 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1711 fence status 5 receive -1 from 4 walltime 1778225306 local 1711
+May 08 07:28:26 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1711 fence request 5 pid 26702 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:28:27 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1712 fence result 5 pid 26702 result -1 term signal 6
+May 08 07:28:27 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1712 fence status 5 receive -1 from 1 walltime 1778225307 local 1712
+May 08 07:28:28 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1713 fence status 5 receive -1 from 2 walltime 1778225308 local 1713
+May 08 07:28:29 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1714 fence status 5 receive -1 from 3 walltime 1778225309 local 1714
+May 08 07:28:30 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1715 fence status 5 receive -1 from 4 walltime 1778225310 local 1715
+May 08 07:28:30 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1715 fence request 5 pid 26729 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:28:31 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1716 fence result 5 pid 26729 result -1 term signal 6
+May 08 07:28:31 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1716 fence status 5 receive -1 from 1 walltime 1778225311 local 1716
+May 08 07:28:32 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1717 fence status 5 receive -1 from 2 walltime 1778225312 local 1717
+May 08 07:28:33 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1718 fence status 5 receive -1 from 3 walltime 1778225313 local 1718
+May 08 07:28:34 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1719 fence status 5 receive -1 from 4 walltime 1778225314 local 1719
+May 08 07:28:34 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1719 fence request 5 pid 26788 nodedown time 1778225021 fence_all dlm_stonith
+May 08 07:28:35 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1720 fence result 5 pid 26788 result -1 term signal 6
+May 08 07:28:35 ip-172-31-35-142.eu-west-1.compute.internal dlm_controld[14899]: 1720 fence status 5 receive -1 from 1 walltime 1778225315 local 1720
