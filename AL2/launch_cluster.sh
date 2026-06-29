@@ -27,6 +27,7 @@ done
 AMI_ID="ami-0ba84fc44e8b9291d"       # AL2
 INSTANCE_TYPE="m7i.large"
 SUBNET_ID="subnet-6570782d"            # eu-west-1a (same AZ for multiattach)
+AVAILABILITY_ZONE="eu-west-1a"
 SECURITY_GROUP_ID="sg-c56ee982"        # default VPC SG
 REGION="eu-west-1"
 KEY_NAME="muhamad-keypair"
@@ -105,6 +106,47 @@ printf "%-12s %-22s %-22s %-16s\n" "----" "-----------" "----------" "---------"
 for i in "${!NODE_NAMES[@]}"; do
   printf "%-12s %-22s %-22s %-16s\n" "${NODE_NAMES[$i]}" "${INSTANCE_IDS[$i]}" "${PRIVATE_IPS[$i]}" "${PUBLIC_IPS[$i]}"
 done
+
+# =============================================================================
+# STEP 2.5 — Create shared EBS multiattach volume + attach to all nodes
+# =============================================================================
+
+echo ""
+echo "========================================"
+echo " Creating shared EBS multiattach volume..."
+echo "========================================"
+
+EBS_VOLUME_ID=$(aws ec2 create-volume \
+  --region "$REGION" \
+  --availability-zone "${AVAILABILITY_ZONE}" \
+  --size 30 \
+  --volume-type io2 \
+  --iops 100 \
+  --multi-attach-enabled \
+  --tag-specifications "ResourceType=volume,Tags=[{Key=Name,Value=gfs2-shared}]" \
+  --query 'VolumeId' \
+  --output text)
+echo "  Created volume: $EBS_VOLUME_ID"
+
+echo ""
+echo "Waiting for volume to become available..."
+aws ec2 wait volume-available --region "$REGION" --volume-ids "$EBS_VOLUME_ID"
+
+echo ""
+echo "Attaching volume to all nodes..."
+for INSTANCE_ID in "${INSTANCE_IDS[@]}"; do
+  echo -n "  → Attaching to $INSTANCE_ID... "
+  aws ec2 attach-volume \
+    --region "$REGION" \
+    --volume-id "$EBS_VOLUME_ID" \
+    --instance-id "$INSTANCE_ID" \
+    --device /dev/sdf \
+    --output text
+  echo ""
+done
+
+echo "Waiting for attachments to complete..."
+sleep 10
 
 # =============================================================================
 # STEP 3 — Build dynamic config strings
@@ -308,7 +350,7 @@ run_on_primary "pvcreate ${GFS2_DEVICE}"
 run_on_primary "vgcreate -Ay -cy clustervg ${GFS2_DEVICE}"
 run_on_primary "lvcreate -L${GFS2_SIZE} -n clusterlv clustervg"
 run_on_primary "vgchange -ay clustervg"
-run_on_primary "mkfs.gfs2 -j${GFS2_JOURNALS} -p lock_dlm -t ${GFS2_TABLE_NAME} /dev/clustervg/clusterlv"
+run_on_primary "yes | mkfs.gfs2 -j${GFS2_JOURNALS} -p lock_dlm -t ${GFS2_TABLE_NAME} /dev/clustervg/clusterlv"
 
 run_on_primary "pcs resource create clusterfs Filesystem \
     device='/dev/clustervg/clusterlv' \
