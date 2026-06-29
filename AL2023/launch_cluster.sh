@@ -31,7 +31,7 @@ LAUNCH_TEMPLATE_VERSION="\$Latest"
 AMI_ID="ami-05cbf8a8aa4e4b755" # AL2023
 REGION="eu-west-1"
 KEY_NAME="muhamad-keypair"
-SSH_KEY_PATH="~/.ssh/id_ed25519"
+SSH_KEY_PATH="$HOME/.ssh/id_ed25519"
 SSH_USER="ec2-user"
 CLUSTER_NAME="macluster"
 GFS2_TABLE_NAME="macluster:sharedFS"
@@ -167,7 +167,7 @@ run_on_all() {
       ssh -i "$SSH_KEY_PATH" \
         -o StrictHostKeyChecking=no \
         -o BatchMode=yes \
-        "${SSH_USER}@${IP}" "sudo bash -c '$CMD'" 2>&1 | sed "s/^/[$NODE] /"
+        "${SSH_USER}@${IP}" "sudo bash -s" <<< "$CMD" 2>&1 | sed "s/^/[$NODE] /"
     ) &
     PIDS+=($!)
   done
@@ -188,7 +188,7 @@ run_on_primary() {
   ssh -i "$SSH_KEY_PATH" \
     -o StrictHostKeyChecking=no \
     -o BatchMode=yes \
-    "${SSH_USER}@${IP}" "sudo bash -c '$CMD'" 2>&1 | sed "s/^/[$NODE] /"
+    "${SSH_USER}@${IP}" "sudo bash -s" <<< "$CMD" 2>&1 | sed "s/^/[$NODE] /"
 }
 
 wait_for_ssh() {

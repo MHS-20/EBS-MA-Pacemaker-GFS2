@@ -16,7 +16,7 @@ set -euo pipefail
 # CONFIGURATION — edit these before running
 # =============================================================================
 
-NODE_NUMBER = 5
+NODE_NUMBER=5
 NODE_NAME_PREFIX="ma-host"
 NODE_NAMES=()
 
@@ -29,7 +29,7 @@ LAUNCH_TEMPLATE_VERSION="\$Latest"
 AMI_ID="ami-0ba84fc44e8b9291d" # AL2
 REGION="eu-west-1"
 KEY_NAME="muhamad-keypair"
-SSH_KEY_PATH="~/.ssh/id_ed25519"
+SSH_KEY_PATH="$HOME/.ssh/id_ed25519"
 SSH_USER="ec2-user"
 CLUSTER_NAME="macluster"
 GFS2_TABLE_NAME="macluster:sharedFS"
@@ -162,7 +162,7 @@ run_on_all() {
       ssh -i "$SSH_KEY_PATH" \
         -o StrictHostKeyChecking=no \
         -o BatchMode=yes \
-        "${SSH_USER}@${IP}" "sudo bash -c '$CMD'" 2>&1 | sed "s/^/[$NODE] /"
+        "${SSH_USER}@${IP}" "sudo bash -s" <<< "$CMD" 2>&1 | sed "s/^/[$NODE] /"
     ) &
     PIDS+=($!)
   done
@@ -184,7 +184,7 @@ run_on_primary() {
   ssh -i "$SSH_KEY_PATH" \
     -o StrictHostKeyChecking=no \
     -o BatchMode=yes \
-    "${SSH_USER}@${IP}" "sudo bash -c '$CMD'" 2>&1 | sed "s/^/[$NODE] /"
+    "${SSH_USER}@${IP}" "sudo bash -s" <<< "$CMD" 2>&1 | sed "s/^/[$NODE] /"
 }
 
 # =============================================================================
