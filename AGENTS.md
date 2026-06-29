@@ -15,7 +15,7 @@ Tooling and documentation for a Pacemaker + GFS2 cluster on AWS EC2. Two OS targ
 
 **AL2 (fully automated):** edit vars at top of `AL2/launch_cluster.sh`, then run it. It launches EC2 instances from a launch template, installs everything, configures fencing, creates DLM/CLVM/GFS2 resources.
 
-**AL2023 (fully automated):** edit vars at top of `AL2023/launch_cluster.sh`, then run it. Requires a pre-compiled kernel in S3 (build once per kernel version via `SetUpAL2023.md` section "Compile the Kernel", then share via S3). The script launches EC2 instances, downloads and installs the custom kernel, builds `gfs2-utils`/`dlm`/`lvm2` from source, installs fence-agents, and creates DLM/lvmlockd/LVM-activate/GFS2 resources.
+**AL2023 (fully automated):** First run `AL2023/build-kernel.sh` once to compile the custom kernel and upload to S3 (launches m7i.4xlarge, compiles, uploads, terminates). Then edit vars at top of `AL2023/launch_cluster.sh`, run it. The launcher launches EC2 instances, downloads and installs the custom kernel, builds `gfs2-utils`/`dlm`/`lvm2` from source, installs fence-agents, and creates DLM/lvmlockd/LVM-activate/GFS2 resources.
 
 ## Critical AL2 ↔ AL2023 differences to preserve
 
