@@ -222,12 +222,11 @@ echo "========================================"
 
 run_on_all "yum remove -y awscli || true"
 run_on_all "yum remove -y python2 python2-pip python2-boto3 || true"
-run_on_all "yum install -y python3-devel libcurl-devel gcc openssl-devel"
+run_on_all "amazon-linux-extras install python3.8 -y"
+run_on_all "yum install -y python38-devel libcurl-devel gcc openssl-devel"
 run_on_all "yum install -y fence-agents-aws"
-run_on_all "yum install -y python-pip"
-
-# Upgrade boto3 targeting python3.7 site-packages
-run_on_all "/usr/bin/python3 -m pip install 'urllib3<2.0' boto3 botocore requests pexpect pycurl certifi --upgrade --target /usr/lib/python3.7/site-packages/"
+run_on_all "/usr/bin/python3.8 -m ensurepip --upgrade"
+run_on_all "/usr/bin/python3.8 -m pip install 'urllib3<2.0' boto3 botocore requests pexpect pycurl certifi --upgrade"
 
 # Install latest AWS CLI v2
 run_on_all "curl -s 'https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip' -o /tmp/awscliv2.zip && cd /tmp && unzip -q awscliv2.zip && ./aws/install --update && rm -rf /tmp/awscliv2.zip /tmp/aws/"
@@ -237,7 +236,7 @@ echo "========================================"
 echo " [All nodes] Fixing fence_aws shebang..."
 echo "========================================"
 
-run_on_all "sed -i 's|#!/usr/bin/python\b|#!/usr/bin/python3|' /usr/sbin/fence_aws"
+run_on_all "sed -i 's|#!/usr/bin/python|#!/usr/bin/python3.8|' /usr/sbin/fence_aws"
 run_on_all "grep -q 'region_name' /usr/sbin/fence_aws || sed -i \"s/conn = boto3.resource('ec2')/conn = boto3.resource('ec2', region_name=options.get('--region'))/\" /usr/sbin/fence_aws"
 
 # =============================================================================
@@ -275,7 +274,7 @@ run_on_primary "pcs stonith create clusterfence fence_aws \
     region=${REGION} \
     pcmk_host_map='${FENCING_MAP}' \
     power_timeout=600 \
-    pcmk_off_timeout=600s \
+    pcmk_off_timeout=600 \
     pcmk_reboot_timeout=480 \
     pcmk_reboot_retries=4 \
     power_wait=5"

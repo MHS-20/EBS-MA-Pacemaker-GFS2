@@ -1,0 +1,4 @@
+Launch Template ID: lt-07be018138967ad1c
+Instance Type: m7i.large
+Root Disk Size: 8GB
+EBS Multiattach: io2 - 30G - 100 IOps
