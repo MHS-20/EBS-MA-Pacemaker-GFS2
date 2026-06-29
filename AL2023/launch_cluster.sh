@@ -29,6 +29,7 @@ done
 AMI_ID="ami-05cbf8a8aa4e4b755"       # AL2023
 INSTANCE_TYPE="m7i.large"
 SUBNET_ID="subnet-6570782d"            # eu-west-1a (same AZ for multiattach)
+AVAILABILITY_ZONE="eu-west-1a"
 SECURITY_GROUP_ID="sg-c56ee982"        # default VPC SG
 REGION="eu-west-1"
 KEY_NAME="muhamad-keypair"
@@ -110,6 +111,47 @@ printf "%-12s %-22s %-22s %-16s\n" "----" "-----------" "----------" "---------"
 for i in "${!NODE_NAMES[@]}"; do
   printf "%-12s %-22s %-22s %-16s\n" "${NODE_NAMES[$i]}" "${INSTANCE_IDS[$i]}" "${PRIVATE_IPS[$i]}" "${PUBLIC_IPS[$i]}"
 done
+
+# =============================================================================
+# STEP 2.5 — Create shared EBS multiattach volume + attach to all nodes
+# =============================================================================
+
+echo ""
+echo "========================================"
+echo " Creating shared EBS multiattach volume..."
+echo "========================================"
+
+EBS_VOLUME_ID=$(aws ec2 create-volume \
+  --region "$REGION" \
+  --availability-zone "${AVAILABILITY_ZONE}" \
+  --size 30 \
+  --volume-type io2 \
+  --iops 100 \
+  --multi-attach-enabled \
+  --tag-specifications "ResourceType=volume,Tags=[{Key=Name,Value=gfs2-shared}]" \
+  --query 'VolumeId' \
+  --output text)
+echo "  Created volume: $EBS_VOLUME_ID"
+
+echo ""
+echo "Waiting for volume to become available..."
+aws ec2 wait volume-available --region "$REGION" --volume-ids "$EBS_VOLUME_ID"
+
+echo ""
+echo "Attaching volume to all nodes..."
+for INSTANCE_ID in "${INSTANCE_IDS[@]}"; do
+  echo -n "  → Attaching to $INSTANCE_ID... "
+  aws ec2 attach-volume \
+    --region "$REGION" \
+    --volume-id "$EBS_VOLUME_ID" \
+    --instance-id "$INSTANCE_ID" \
+    --device /dev/sdf \
+    --output text
+  echo ""
+done
+
+echo "Waiting for attachments to complete..."
+sleep 10
 
 # =============================================================================
 # STEP 3 — Build dynamic config strings
@@ -228,7 +270,7 @@ echo "========================================"
 
 run_on_all "dnf update -y"
 run_on_all "dnf groupinstall 'Development Tools' -y"
-run_on_all "dnf install -y pcs pacemaker openssl-devel elfutils-libelf-devel bc flex bison perl ncurses-devel dwarves rsync wget curl git hmaccalc python3-devel perl-generators perl-ExtUtils-Embed libaio-devel autoconf automake libtool gettext zlib-devel bzip2-devel libblkid-devel libuuid-devel kernel-devel pkgconfig corosynclib-devel libqb-devel systemd-devel libxml2-devel pacemaker-libs-devel readline-devel device-mapper-devel device-mapper-event-devel"
+run_on_all "dnf install -y pcs pacemaker openssl-devel elfutils-libelf-devel bc flex bison perl ncurses-devel dwarves rsync wget git hmaccalc python3-devel perl-generators perl-ExtUtils-Embed libaio-devel autoconf automake libtool gettext zlib-devel bzip2-devel libblkid-devel libuuid-devel kernel-devel pkgconfig corosynclib-devel libqb-devel systemd-devel libxml2-devel pacemaker-libs-devel readline-devel device-mapper-devel device-mapper-event-devel"
 run_on_all "systemctl enable --now pcsd.service"
 run_on_all "systemctl enable corosync pacemaker"
 run_on_all "echo 'hacluster:${HACLUSTER_PASS}' | chpasswd"
@@ -250,7 +292,20 @@ echo "========================================"
 echo " [All nodes] Installing custom kernel..."
 echo "========================================"
 
-run_on_all "aws s3 cp ${KERNEL_S3_BUCKET}/${KERNEL_FILE} /tmp/${KERNEL_FILE}"
+echo "Downloading kernel archive locally..."
+aws s3 cp ${KERNEL_S3_BUCKET}/${KERNEL_FILE} /tmp/${KERNEL_FILE} --region "$REGION"
+
+echo "Copying kernel to all nodes..."
+for i in "${!NODE_NAMES[@]}"; do
+  IP="${PUBLIC_IPS[$i]}"
+  NODE="${NODE_NAMES[$i]}"
+  echo -n "  Copying to $NODE... "
+  scp -i "$SSH_KEY_PATH" -o StrictHostKeyChecking=no -o BatchMode=yes \
+    /tmp/${KERNEL_FILE} "${SSH_USER}@${IP}:/tmp/${KERNEL_FILE}"
+  echo "done"
+done
+rm -f /tmp/${KERNEL_FILE}
+
 run_on_all "tar -xzf /tmp/${KERNEL_FILE} -C /"
 run_on_all "grubby --add-kernel=/boot/vmlinuz-${KERNEL_VERSION}-custom --initrd=/boot/initramfs-${KERNEL_VERSION}-custom.img --title='Linux ${KERNEL_VERSION} custom (GFS2+DLM)' --copy-default --make-default || grubby --add-kernel=/boot/vmlinuz-${KERNEL_VERSION}-custom --initrd=/boot/initramfs-${KERNEL_VERSION}-custom.img --title='Linux ${KERNEL_VERSION} custom' --copy-default --make-default"
 
@@ -308,7 +363,7 @@ echo "========================================"
 echo " [All nodes] Building dlm..."
 echo "========================================"
 
-run_on_all "cd /tmp && git clone https://pagure.io/dlm.git && cd /tmp/dlm && ./configure && make -j\$(nproc) && make install && ldconfig"
+run_on_all "cd /tmp && git clone https://pagure.io/dlm.git && cd /tmp/dlm && make -j\$(nproc) && make install && ldconfig"
 
 # =============================================================================
 # STEP 10 — ALL NODES: build lvm2 from source
@@ -460,7 +515,7 @@ run_on_primary "vgcreate --shared clustervg ${GFS2_DEVICE}"
 run_on_primary "lvcreate -L${GFS2_SIZE} -n clusterlv clustervg"
 run_on_primary "vgchange --lock-start clustervg"
 run_on_primary "vgchange -asy clustervg"
-run_on_primary "mkfs.gfs2 -j${GFS2_JOURNALS} -p lock_dlm -t ${GFS2_TABLE_NAME} /dev/clustervg/clusterlv"
+run_on_primary "yes | mkfs.gfs2 -j${GFS2_JOURNALS} -p lock_dlm -t ${GFS2_TABLE_NAME} /dev/clustervg/clusterlv"
 run_on_primary "vgchange -an clustervg"
 
 # LVM-activate resource
