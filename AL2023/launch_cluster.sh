@@ -26,9 +26,10 @@ for i in $(seq 1 "$NODE_NUMBER"); do
   NODE_NAMES+=("${NODE_NAME_PREFIX}-${i}")
 done
 
-LAUNCH_TEMPLATE_ID="lt-07be018138967ad1c"
-LAUNCH_TEMPLATE_VERSION="\$Latest"
-AMI_ID="ami-05cbf8a8aa4e4b755" # AL2023
+AMI_ID="ami-05cbf8a8aa4e4b755"       # AL2023
+INSTANCE_TYPE="m7i.large"
+SUBNET_ID="subnet-6570782d"            # eu-west-1a (same AZ for multiattach)
+SECURITY_GROUP_ID="sg-c56ee982"        # default VPC SG
 REGION="eu-west-1"
 KEY_NAME="muhamad-keypair"
 SSH_KEY_PATH="$HOME/.ssh/id_ed25519"
@@ -40,7 +41,6 @@ GFS2_SIZE="20G"
 GFS2_DEVICE="/dev/nvme1n1"
 GFS2_MOUNT="/sharedFS"
 HACLUSTER_PASS="pass"
-FENCING_IAM_PROFILE="ec2-fencing-test"
 KERNEL_S3_BUCKET="s3://muhamad-tirocinio-bucket-861507897222-eu-west-1-an"
 KERNEL_VERSION="6.1.161"
 KERNEL_FILE="kernel-${KERNEL_VERSION}-custom.tar.gz"
@@ -59,9 +59,11 @@ for i in "${!NODE_NAMES[@]}"; do
   echo "  Launching $NODE..."
   INSTANCE_ID=$(aws ec2 run-instances \
     --region "$REGION" \
-    --launch-template "LaunchTemplateId=${LAUNCH_TEMPLATE_ID},Version=${LAUNCH_TEMPLATE_VERSION}" \
-    --count 1 \
     --image-id "$AMI_ID" \
+    --instance-type "$INSTANCE_TYPE" \
+    --key-name "$KEY_NAME" \
+    --subnet-id "$SUBNET_ID" \
+    --security-group-ids "$SECURITY_GROUP_ID" \
     --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=${NODE}}]" \
     --query 'Instances[0].InstanceId' \
     --output text)
@@ -77,29 +79,36 @@ aws ec2 wait instance-running \
 echo "All instances running."
 
 # =============================================================================
-# STEP 2 — Retrieve private IPs
+# STEP 2 — Retrieve IPs (public for SSH, private for cluster)
 # =============================================================================
 
 echo ""
-echo "Retrieving private IPs..."
+echo "Retrieving IPs..."
 PRIVATE_IPS=()
+PUBLIC_IPS=()
 for INSTANCE_ID in "${INSTANCE_IDS[@]}"; do
-  IP=$(aws ec2 describe-instances \
+  PRIV=$(aws ec2 describe-instances \
     --region "$REGION" \
     --instance-ids "$INSTANCE_ID" \
     --query 'Reservations[0].Instances[0].PrivateIpAddress' \
     --output text)
-  PRIVATE_IPS+=("$IP")
+  PUB=$(aws ec2 describe-instances \
+    --region "$REGION" \
+    --instance-ids "$INSTANCE_ID" \
+    --query 'Reservations[0].Instances[0].PublicIpAddress' \
+    --output text)
+  PRIVATE_IPS+=("$PRIV")
+  PUBLIC_IPS+=("$PUB")
 done
 
 echo ""
 echo "========================================"
 echo " Cluster Node Summary"
 echo "========================================"
-printf "%-12s %-22s %-22s\n" "Name" "Instance ID" "Private IP"
-printf "%-12s %-22s %-22s\n" "----" "-----------" "----------"
+printf "%-12s %-22s %-22s %-16s\n" "Name" "Instance ID" "Private IP" "Public IP"
+printf "%-12s %-22s %-22s %-16s\n" "----" "-----------" "----------" "---------"
 for i in "${!NODE_NAMES[@]}"; do
-  printf "%-12s %-22s %-22s\n" "${NODE_NAMES[$i]}" "${INSTANCE_IDS[$i]}" "${PRIVATE_IPS[$i]}"
+  printf "%-12s %-22s %-22s %-16s\n" "${NODE_NAMES[$i]}" "${INSTANCE_IDS[$i]}" "${PRIVATE_IPS[$i]}" "${PUBLIC_IPS[$i]}"
 done
 
 # =============================================================================
@@ -136,7 +145,7 @@ echo ""
 
 echo "Waiting for SSH to be available on all nodes..."
 for i in "${!NODE_NAMES[@]}"; do
-  IP="${PRIVATE_IPS[$i]}"
+  IP="${PUBLIC_IPS[$i]}"
   NODE="${NODE_NAMES[$i]}"
   echo -n "  Waiting for $NODE ($IP)..."
   until ssh -i "$SSH_KEY_PATH" \
@@ -159,7 +168,7 @@ run_on_all() {
   local PIDS=()
   local FAILED=0
   for i in "${!NODE_NAMES[@]}"; do
-    local IP="${PRIVATE_IPS[$i]}"
+    local IP="${PUBLIC_IPS[$i]}"
     local NODE="${NODE_NAMES[$i]}"
     (
       echo "[$NODE] Running: ${CMD:0:60}..."
@@ -181,7 +190,7 @@ run_on_all() {
 
 run_on_primary() {
   local CMD="$1"
-  local IP="${PRIVATE_IPS[0]}"
+  local IP="${PUBLIC_IPS[0]}"
   local NODE="${NODE_NAMES[0]}"
   echo "[$NODE (primary)] Running: ${CMD:0:60}..."
   ssh -i "$SSH_KEY_PATH" \
@@ -193,7 +202,7 @@ run_on_primary() {
 wait_for_ssh() {
   echo "Waiting for SSH to recover on all nodes after reboot..."
   for i in "${!NODE_NAMES[@]}"; do
-    IP="${PRIVATE_IPS[$i]}"
+    IP="${PUBLIC_IPS[$i]}"
     NODE="${NODE_NAMES[$i]}"
     echo -n "  Waiting for $NODE ($IP)..."
     until ssh -i "$SSH_KEY_PATH" \
@@ -253,7 +262,7 @@ echo "========================================"
 # Reboot all nodes in parallel (capture PIDs but don't exit on SSH disconnect)
 REBOOT_PIDS=()
 for i in "${!NODE_NAMES[@]}"; do
-  IP="${PRIVATE_IPS[$i]}"
+  IP="${PUBLIC_IPS[$i]}"
   NODE="${NODE_NAMES[$i]}"
   (
     ssh -i "$SSH_KEY_PATH" \
@@ -495,17 +504,17 @@ echo " Final cluster status"
 echo "========================================"
 ssh -i "$SSH_KEY_PATH" \
   -o StrictHostKeyChecking=no \
-  "${SSH_USER}@${PRIVATE_IPS[0]}" \
+  "${SSH_USER}@${PUBLIC_IPS[0]}" \
   "sudo pcs status"
 
 echo ""
 echo "========================================"
 echo " DONE — Cluster Summary"
 echo "========================================"
-printf "%-12s %-22s %-22s\n" "Name" "Instance ID" "Private IP"
-printf "%-12s %-22s %-22s\n" "----" "-----------" "----------"
+printf "%-12s %-22s %-22s %-16s\n" "Name" "Instance ID" "Private IP" "Public IP"
+printf "%-12s %-22s %-22s %-16s\n" "----" "-----------" "----------" "---------"
 for i in "${!NODE_NAMES[@]}"; do
-  printf "%-12s %-22s %-22s\n" "${NODE_NAMES[$i]}" "${INSTANCE_IDS[$i]}" "${PRIVATE_IPS[$i]}"
+  printf "%-12s %-22s %-22s %-16s\n" "${NODE_NAMES[$i]}" "${INSTANCE_IDS[$i]}" "${PRIVATE_IPS[$i]}" "${PUBLIC_IPS[$i]}"
 done
 echo ""
 echo "Kernel: ${KERNEL_VERSION}-custom"
