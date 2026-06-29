@@ -58,7 +58,6 @@ for i in "${!NODE_NAMES[@]}"; do
     --count 1 \
     --image-id "$AMI_ID" \
     --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=${NODE}}]" \
-    --iam-instance-profile "Name=${FENCING_IAM_PROFILE}" \
     --query 'Instances[0].InstanceId' \
     --output text)
   INSTANCE_IDS+=("$INSTANCE_ID")
